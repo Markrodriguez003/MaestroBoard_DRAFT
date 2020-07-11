@@ -1,0 +1,15 @@
+.hide {
+    display: none
+}
+
+.center-align-header {
+    text-align: center;
+}
+
+.boardPage {
+    border: 5px solid
+    background-image: ("/assets/corkboard.jpg");
+    height: 750px;
+    width: 95%;
+    
+}
