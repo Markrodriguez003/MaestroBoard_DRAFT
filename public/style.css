@@ -7,9 +7,8 @@
 }
 
 .boardPage {
-    border: 5px solid
-    background-image: ("/assets/corkboard.jpg");
+    border: 5px solid;
+    background-image: url("/assets/corkboard.jpg");
     height: 750px;
     width: 95%;
-    
 }
