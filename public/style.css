@@ -6,9 +6,165 @@
     text-align: center;
 }
 
-.boardPage {
-    border: 5px solid;
-    background-image: url("/assets/corkboard.jpg");
+
+.mainBoardContainer {
+    border: #cacaca 4px solid;
+    background-image: url("assets/corkboard.jpg");
+    background-color: #cccccc;
+    /* Used if the image is unavailable */
     height: 750px;
+    /* You must set a specified height */
     width: 95%;
-}
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .boardCard {
+    background-image: url("assets/notecard1.png");
+    height: 36%;
+    /* You must set a specified height */
+    width: 32%;
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    /* margin-left: auto;
+    margin-right: auto; */
+    display: inline-block;
+  }
+  
+  .postText {
+    padding-top: 23.5px;
+    padding-left: 53px;
+    padding-right: 20px;
+    color: red;
+    font-size: 16px !important;
+    font-family: monospace;
+    letter-spacing: 1.2px;
+    /* line-height: 28px; */
+    line-height: 18px;
+  }
+  
+  .boardCardAlt {
+    background-image: url("assets/notecard2.png");
+    height: 36%;
+    /* You must set a specified height */
+    width: 32%;
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    /* margin-left: auto;
+    margin-right: auto; */
+    display: inline-block;
+    transform: rotate(-7deg);
+  }
+  
+  .boardCardAlt2 {
+    background-image: url("assets/notecard4.png");
+    height: 36%;
+    /* You must set a specified height */
+    width: 32%;
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    /* margin-left: auto;
+    margin-right: auto; */
+    display: inline-block;
+    transform: rotate(7deg);
+  }
+  
+  .boardCardAlt3 {
+    background-image: url("assets/scratchpad5.png");
+    height: 36%;
+    /* You must set a specified height */
+    width: 32%;
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    /* margin-left: auto;
+    margin-right: auto; */
+    display: inline-block;
+  }
+  
+  .pin {
+    background-image: url("assets/push-pin2.png");
+    height: 22px;
+    /* You must set a specified height */
+    width: 22px;
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pin2 {
+    background-image: url("assets/push-pin3.png");
+    height: 22px;
+    /* You must set a specified height */
+    width: 22px;
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pin3 {
+    background-image: url("assets/push-pin4.png");
+    height: 22px;
+    /* You must set a specified height */
+    width: 22px;
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pin4 {
+    background-image: url("assets/push-pin5.png");
+    height: 22px;
+    /* You must set a specified height */
+    width: 22px;
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  
