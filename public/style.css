@@ -6,6 +6,11 @@
     text-align: center;
 }
 
+.makePost {
+    display: block;
+  }
+
+ 
 
 .mainBoardContainer {
     border: #cacaca 4px solid;
