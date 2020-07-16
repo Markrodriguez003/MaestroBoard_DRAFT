@@ -7,14 +7,14 @@ module.exports = (sequelize, DataTypes) => {
         instrument: {
             type: DataTypes.STRING,
         }
-    },{ timestamps: false });
+    }, { timestamps: false });
 
     // Associate instrument table to Post table (foreign key)
-    // cb_Instrument.associate =  (models) => {
+
+    // cb_Instrument.associate = (models) => {
     //     cb_Instrument.belongsTo(models.cb_Post, {
-    //         foreignKey: {
-    //             allowNull: true
-    //         }
+    //         allowNull: false
+
     //     });
     // };
 

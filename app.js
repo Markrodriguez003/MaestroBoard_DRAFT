@@ -31,8 +31,8 @@ require("./routes/routes.js")(app);
 require("./routes/apiRoute.js")(app);
 
 // Create a port listener to make our app/page work with port but not before we load in DB
+// { force: true }
 db.sequelize.sync({ force: true }).then((err) => {
-
     // Array of criteria options   
     const criteriaOps = [
         { criteria: "Selling-Instrument" },
@@ -69,7 +69,7 @@ db.sequelize.sync({ force: true }).then((err) => {
     }).catch((err) => {
         console.log("Failed to load instruments");
         console.log(err);
-    }).finally(console.log("what"));
+    }).finally(console.log("..."));
 
     // Setup server listener to port AFTER db tables is fully loaded
     app.listen(PORT, function () {
