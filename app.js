@@ -32,7 +32,7 @@ require("./routes/apiRoute.js")(app);
 
 // Create a port listener to make our app/page work with port but not before we load in DB
 // { force: true }
-db.sequelize.sync({ force: true }).then((err) => {
+db.sequelize.sync().then((err) => {
     // Array of criteria options   
     const criteriaOps = [
         { criteria: "Selling-Instrument" },
