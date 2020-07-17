@@ -60,19 +60,19 @@
   
   .boardCardAlt {
     background-image: url("assets/notecard2.png");
-    height: 50%;
+    /* height: 50%; */
     /* You must set a specified height */
-    width: 32%;
-    background-position: center;
+    /* width: 32%; */
+    /* background-position: center; */
     /* Center the image */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     /* Do not repeat the image */
-    background-size: cover;
+    /* background-size: cover; */
     /* Resize the background image to cover the entire container */
     /* margin-left: auto;
     margin-right: auto; */
     display: inline-block;
-    transform: rotate(-7deg);
+    transform: rotate(-17deg);
   }
   
   .boardCardAlt2 {
@@ -125,7 +125,7 @@
   }
 
   .boardCardAlt5 {
-      float: right;
+      /* float: right; */
     background-image: url("assets/scratchpad5.png");
     height: 50%;
     /* You must set a specified height */
@@ -164,15 +164,17 @@
     height: 22px;
     /* You must set a specified height */
     width: 22px;
-    background-position: center;
+    /* position: relative; */
+    /* background-position: top; */
     /* Center the image */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     /* Do not repeat the image */
+    /* position: absolute; 
+    top: 10px; 
+    right: 100px; */
     background-size: cover;
     /* Resize the background image to cover the entire container */
-    margin-top: 7px;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-top: 0px; */
   }
 
   .pin2 {
@@ -180,15 +182,17 @@
     height: 22px;
     /* You must set a specified height */
     width: 22px;
-    background-position: center;
+    /* position: relative; */
+    /* background-position: top; */
     /* Center the image */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     /* Do not repeat the image */
+    /* position: absolute; 
+    top: 10px; 
+    right: 50px; */
     background-size: cover;
     /* Resize the background image to cover the entire container */
-    margin-top: 7px;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-top: 0px; */
   }
 
   .pin3 {
@@ -196,15 +200,17 @@
     height: 22px;
     /* You must set a specified height */
     width: 22px;
-    background-position: center;
+    /* position: relative; */
+    /* background-position: top; */
     /* Center the image */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     /* Do not repeat the image */
+    /* position: absolute; 
+    top: 10px; 
+    right: 200px; */
     background-size: cover;
     /* Resize the background image to cover the entire container */
-    margin-top: 7px;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-top: 0px; */
   }
 
   .pin4 {
@@ -212,15 +218,17 @@
     height: 22px;
     /* You must set a specified height */
     width: 22px;
-    background-position: center;
+    /* position: relative; */
+    /* background-position: top; */
     /* Center the image */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     /* Do not repeat the image */
+    /* position: absolute; 
+    top: 10px; 
+    right: 150px; */
     background-size: cover;
     /* Resize the background image to cover the entire container */
-    margin-top: 7px;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-top: 0px; */
   }
 
   
