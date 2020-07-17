@@ -106,23 +106,18 @@ module.exports = (app) => {
                     // ? Do another findall() in here to grab newly created user ID?
                     newUserEmail = req.body.userEmail;
                     console.log(newUserId);
+
+                    // Push the newly created user's post into database as well while matching FK id's for both    
+                    db.cb_Post.create({
+                        postTitle: req.body.postTitle,
+                        postBody: req.body.postBody,
+                        fk_user: newUserId
+                    }).then((dbPost) => {
+                        res.json(dbPost); // Spits out newly created user and their post to frontend
+                    });
                 });
 
-                // Finds newly created ID and uses it to set fk_user for new user.
-                db.cb_User.findOne({ where: { userEmail: newUserEmail } }).then(user => {
-                    newUserId = user.id;
-                    console.log("NEWLY CREATED USER ID IS ------<>" + newUserId );
-                });
 
-
-                // Push the newly created user's post into database as well while matching FK id's for both    
-                db.cb_Post.create({
-                    postTitle: req.body.postTitle,
-                    postBody: req.body.postBody,
-                    fk_user: newUserId
-                }).then((dbPost) => {
-                    res.json(dbPost); // Spits out newly created user and their post to frontend
-                });
 
             } else { // If user is already in table then . . . 
 
@@ -135,7 +130,7 @@ module.exports = (app) => {
                     postBody: req.body.postBody,
                     fk_user: userIdPlaceholder
                 }).then((dbPost) => {
-                    res.json(dbPost); // Spits out newly created post to frontend
+                    res.json(dbPost); // jnsjdgnsjdng Spits out newly created post to frontend
                 });
             }
         });
