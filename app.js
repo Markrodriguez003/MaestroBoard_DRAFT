@@ -1,34 +1,40 @@
 
-const express = require("express");
-const handlebars = require("express-handlebars");
-const app = express();
-const path = require("path");
+const express = require("express"); // Importing express module to handle our node routing
+const handlebars = require("express-handlebars"); // Importing handlebars to use as our template system
+const app = express(); // Initializing our express app
+const path = require("path"); // Importing path node module 
 const bodyParser = require("body-parser"); // Importing node body-parser to parse JSON
 
+// Sets up the port for development (8080) and for running it on a server service like heroku (process.env.PORT)
 const PORT = process.env.PORT || 8080;
 
 // Loads middleware to parse JSON and grab json from POST bodies
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Sets up our template to handlebars
 app.set("view engine", "handlebars");
 
+// Initialized handlebars as our template engine and associating it to .handlebars files  
 app.engine("handlebars", handlebars({
     extname: "handlebars",
     layoutsDir: path.join(__dirname + '/views/layouts')
 }));
 
-
+// Sets up the static folder that contains all of our static assets (the things that don't change -> images, sound files, our pages, ect)
 app.use(express.static(path.join(__dirname, "/public")));
 
 // Grabs our DB and its models
 const db = require("./models");
 
-// This will handle GET requests
+// This will handle static/basic GET requests
 require("./routes/routes.js")(app);
 
-// This will handle POST requests
-require("./routes/apiRoute.js")(app);
+// This will handle API GET requests
+require("./routes/api-get-routes")(app);
+
+// This will handle API POST requests
+require("./routes/api-post-routes")(app);
 
 // Create a port listener to make our app/page work with port but not before we load in DB
 // { force: true }
@@ -50,7 +56,6 @@ db.sequelize.sync({ force: true }).then((err) => {
         console.log(err);
     });
 
-
     // instrument array of objects to load instrument table
     const instr = [
         { instrument: "Guitar" },
@@ -60,65 +65,74 @@ db.sequelize.sync({ force: true }).then((err) => {
         { instrument: "Brass" },
         { instrument: "Woodwind" },
         { instrument: "Synthesizer" },
-        { instrument: "Studio-Equipment" }
+        { instrument: "Studio-Equipment" },
+        { instrument: "DJ" }
     ];
+
+    // Example Users object array
     const exampleUsers = [
         {
             userName: "Asmondo2",
             userEmail: "Asmondo2@gmail.com",
-            userNumber: "123456789422"
-        },
-        {
+            userNumber: "123456789422",
+        }, {
             userName: "jAMES333",
             userEmail: "JAMES22!@yahoo.com.com",
-            userNumber: "7777777777"
-        },
-        {
+            userNumber: "7777777777",
+        }, {
             userName: "markrodriguez003",
             userEmail: "markrodriguez0032@gmail.com",
             userNumber: "78978978888",
-        },
-        {
+        }, {
             userName: "Ryann141",
             userEmail: "Ryann141@hotmail.com",
             userNumber: "1112223333",
+        }, {
+            userName: "n141brian",
+            userEmail: "brybry@viewmail.com",
+            userNumber: "0000000000",
         }
     ];
+
+    // Example Posts object array
     const examplePosts = [
 
-        // Asmondo2   id 1   fk_user 1
         {
-            
             postTitle: "Looking for Fender Baxo!",
             postBody: "Buying a fender jazz bass, any year. Offering $888.88 CASH!",
-            criteria: "1",
-            instrument: "2"
+            fk_criteria: 1,
+            fk_instrument: 2,
+            fk_user: 1
         },
 
-        // james id 2 fk_user 2
         {
-            
             postTitle: "Selling Ibanez hollowbody!",
             postBody: "Hey guys, selling a ibanez hollowbody, mint and kept in a smokefree studio. $425.00 CASH or CASHAPP Only!!!",
-            criteria: "2",
-            instrument: "1"
+            fk_criteria: 2,
+            fk_instrument: 1,
+            fk_user: 2
         },
 
-        // markrodriguez id 3 fk_user 3
         {
-         
             postTitle: "On the lookout for microphone preamps!",
             postBody: "Hey guys I am looking for studio grade microphone preamps. Anything from UAD will be considered!",
-            criteria: "1",
-            instrument: "9"
+            fk_criteria: 1,
+            fk_instrument: 9,
+            fk_user: 3
         },
-            // Ryan id 5 fk_user 5
         {
-           
+            postTitle: "Selling studio desk!",
+            postBody: "Selling studio grade desk with rack mounts. Cherry wood finish, almost mint. $550.00",
+            fk_criteria: 2,
+            fk_instrument: 8,
+            fk_user: 4
+        },
+        {
             postTitle: "Looking for alto sax",
             postBody: "Looking for touring grade alto sax! Offering $777.88 CASH!",
-            criteria: "1",
-            instrument: "7"
+            fk_criteria: 1,
+            fk_instrument: 7,
+            fk_user: 5
         }
     ];
 
@@ -130,17 +144,19 @@ db.sequelize.sync({ force: true }).then((err) => {
         console.log(err);
     }).finally(console.log("..."));
 
-    db.cb_Post.bulkCreate(examplePosts, { validate: true }).then(() => {
-        console.log("Post loaded");
-    }).catch((err) => {
-        console.log("Failed to load Post");
-        console.log(err);
-    }).finally(console.log("..."));
-
+    // Loads Example Users (5) into User table
     db.cb_User.bulkCreate(exampleUsers, { validate: true }).then(() => {
         console.log("User loaded");
     }).catch((err) => {
         console.log("Failed to load User");
+        console.log(err);
+    }).finally(console.log("..."));
+
+    // Loads Example Posts (5) into Posts table
+    db.cb_Post.bulkCreate(examplePosts, { validate: true }).then(() => {
+        console.log("Post loaded");
+    }).catch((err) => {
+        console.log("Failed to load Post");
         console.log(err);
     }).finally(console.log("..."));
 

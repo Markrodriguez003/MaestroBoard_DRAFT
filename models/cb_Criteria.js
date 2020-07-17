@@ -3,15 +3,16 @@ module.exports = (sequelize, DataTypes) => {
         criteria: {
             type: DataTypes.STRING,
         },
-    },{ timestamps: false });
+    }, { timestamps: false });
 
-    // cb_Criteria.associate = function (models) {
-    //     cb_Criteria.belongsTo(models.cb_Post, {
-    //         foreignKey: {
-    //             allowNull: false
-    //         }
-    //     });
-    // };
+    cb_Criteria.associate = function (models) {
+        cb_Criteria.hasMany(models.cb_Post, {
+
+            foreignKey: 'fk_criteria',
+            allowNull: false
+
+        });
+    };
 
     return cb_Criteria;
 };

@@ -1,7 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
 
-
-
     // Creating instrument table
     const cb_Instrument = sequelize.define("cb_Instrument", {
         instrument: {
@@ -11,12 +9,15 @@ module.exports = (sequelize, DataTypes) => {
 
     // Associate instrument table to Post table (foreign key)
 
-    // cb_Instrument.associate = (models) => {
-    //     cb_Instrument.belongsTo(models.cb_Post, {
-    //         allowNull: false
+    cb_Instrument.associate = (models) => {
+        cb_Instrument.hasMany(models.cb_Post, {
 
-    //     });
-    // };
+            foreignKey: 'fk_instrument',
+            allowNull: false
+
+
+        });
+    };
 
     return cb_Instrument;
 };

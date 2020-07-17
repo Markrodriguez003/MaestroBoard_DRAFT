@@ -13,18 +13,15 @@ module.exports = (sequelize, DataTypes) => {
         cb_Post.belongsTo(models.cb_Instrument, {
             foreignKey: 'fk_instrument',
             allowNull: false
-
         });
 
         cb_Post.belongsTo(models.cb_Criteria, {
             foreignKey: 'fk_criteria',
             allowNull: false
-
         });
         cb_Post.belongsTo(models.cb_User, {
             foreignKey: 'fk_user',
             allowNull: false
-
         });
     };
 
