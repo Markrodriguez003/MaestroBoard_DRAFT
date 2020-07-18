@@ -1,19 +1,49 @@
+{{!--  --}}
+{{!-- codys code --}}
+<script type="c6a98b18dc1ac95126b9839b-text/javascript">
+
+var digitsOnly = /[1234567890]/g;
+var alphaOnly = /[A-Za-z]/gi;
+
+function restrictCharacters(myfield, e, restrictionType) {
+	if (!e) var e = window.event
+	if (e.keyCode) code = e.keyCode;
+	else if (e.which) code = e.which;
+	var character = String.fromCharCode(code);
+
+	
+	if (code==27) { this.blur(); return false; }
+	
+	if (!e.ctrlKey ) {
+		if (character.match(restrictionType)) {
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
+}
+</script>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="c6a98b18dc1ac95126b9839b-|49" defer=""></script>
+{{!--  --}}
+{{!-- codys code --}}
+
 <h1 class="center-align-header">Make your MaestroBoard Post!</h1>
 <br>
 <br>
 <div id="main_block" class="makePost">
   <form>
   <div class="form-group post-form">
-    <label for="exampleFormControlInput1" > Name</label>
-    <input type="text" class="form-control userName" id="exampleFormControlInput1" placeholder="name@example.com">
+    <label for="exampleFormControlInput1" > Name</label>                                                    {{!-- cody text below sets max chararacter length and onkeypress is character validation.  --}}
+    <input type="text" class="form-control userName" id="exampleFormControlInput1" placeholder="John Doe" maxlength="20" onkeypress="if (!window.__cfRLUnblockHandlers) return false; return restrictCharacters(this, event, alphaOnly);" data-cf-modified-c6a98b18dc1ac95126b9839b-="" />
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1" >Email Address</label>
-    <input type="email" class="form-control userEmail" id="exampleFormControlInput1" placeholder="email@example.com">
+    <input type="email" class="form-control userEmail" id="exampleFormControlInput1" placeholder="email@example.com" maxlength="30">
   </div>
    <div class="form-group">
-    <label for="exampleFormControlInput1" >Phone Number</label>
-    <input type="text" class="form-control userPhone" id="exampleFormControlInput1" placeholder="(800)555-5555">
+    <label for="exampleFormControlInput1" >Phone Number</label>                                                     {{!-- cody text below sets max chararacter length and onkeypress is character validation.  --}}
+    <input type="text" class="form-control userPhone" id="exampleFormControlInput1" placeholder="(800)555-5555" maxlength="10" onkeypress="if (!window.__cfRLUnblockHandlers) return false; return restrictCharacters(this, event, digitsOnly);" data-cf-modified-c6a98b18dc1ac95126b9839b-="" />
   </div>
    <div class="form-group">
     <label for="exampleFormControlInput1">Post Title</label>
@@ -45,7 +75,7 @@
   </div>
    <div class="form-group">
     <label for="exampleFormControlTextarea1" >Description of instrument to buy/sell</label>
-    <textarea class="form-control userMessage" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea class="form-control userMessage" id="exampleFormControlTextarea1" rows="3" maxlength="255"></textarea>
   </div>
 </form>
 
