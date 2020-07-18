@@ -22,4 +22,7 @@ module.exports = (app) => {
         res.render("myboard");
     });
 
+
+  
+
 };

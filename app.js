@@ -22,7 +22,7 @@ app.engine("handlebars", handlebars({
 }));
 
 // Sets up the static folder that contains all of our static assets (the things that don't change -> images, sound files, our pages, ect)
-app.use(express.static(path.join(__dirname, "/public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Grabs our DB and its models
 const db = require("./models");
@@ -58,15 +58,15 @@ db.sequelize.sync({ force: true }).then((err) => {
 
     // instrument array of objects to load instrument table
     const instr = [
-        { instrument: "Guitar" },
-        { instrument: "Bass" },
-        { instrument: "Drums" },
-        { instrument: "Percussion" },
-        { instrument: "Brass" },
-        { instrument: "Woodwind" },
-        { instrument: "Synthesizer" },
-        { instrument: "Studio-Equipment" },
-        { instrument: "DJ" }
+        { instrument: "guitar" },
+        { instrument: "bass" },
+        { instrument: "drums" },
+        { instrument: "percussion" },
+        { instrument: "brass" },
+        { instrument: "woodwind" },
+        { instrument: "synthesizer" },
+        { instrument: "studio" },
+        { instrument: "dj" }
     ];
 
     // Example Users object array
@@ -117,7 +117,7 @@ db.sequelize.sync({ force: true }).then((err) => {
             postTitle: "On the lookout for microphone preamps!",
             postBody: "Hey guys I am looking for studio grade microphone preamps. Anything from UAD will be considered!",
             fk_criteria: 1,
-            fk_instrument: 9,
+            fk_instrument:8,
             fk_user: 3
         },
         {
@@ -131,7 +131,7 @@ db.sequelize.sync({ force: true }).then((err) => {
             postTitle: "Looking for alto sax",
             postBody: "Looking for touring grade alto sax! Offering $777.88 CASH!",
             fk_criteria: 1,
-            fk_instrument: 7,
+            fk_instrument: 5,
             fk_user: 5
         }
     ];

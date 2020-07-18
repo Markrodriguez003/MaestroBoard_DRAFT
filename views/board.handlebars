@@ -1,156 +1,44 @@
-<div>
-        <h1 class="center-align-header">Check Out Our Community Posts!</h1>
+
+
+<div class="row s12 m12 l12">
+    <div class="myBoardBanner teal accent "> <i class="material-icons">developer_board</i> Community MaestroBoard</div>
+
+</div>
+<div class="container">
+    <div class="row">
+        <div class="container sort-dropdown col s12 m6 l6">
+            <select class="browser-default postSelectOptions">
+                <option value="" disabled selected>Sort Posts</option>
+                <option value="dateDesc">Sort By: Date - Desc</option>
+                <option value="dateAsc">Sort By: Date - Asc</option>
+                <option value="sell">Sort By: Criteria - Selling</option>
+                <option value="buy">Sort By: Criteria - Buying</option>
+                <option value="instruments">Sort By: Instrument</option>
+            </select>
+        </div>
+
+        <div class="container sort-dropdown instrumentSelectHide col s12 m6 l6">
+            <select class="browser-default postInstrSelectOptions">
+                <option value="" disabled selected>Instrument Options</option>
+                <option value="guitar">Guitar</option>
+                <option value="bass">Bass</option>
+                <option value="drums">Drums</option>
+                <option value="percussion">Percussion</option>
+                <option value="brass">Brass</option>
+                <option value="woodwind">Woodwind</option>
+                <option value="synthesizer">Synthesizer</option>
+                <option value="studio">Studio-Equipment</option>
+                <option value="dj">DJ</option>
+            </select>
+        </div>
+        <button type="submit" class="waves-effect waves-light teal lighten-1 btn btn-large sortBtn" ><i class="material-icons left">sort</i>Sort!</button>
+    </div>
 </div>
 
-<div class="mainBoardContainer">
 
-  <div class="container ">
-   
-    <div class="row" id="stickyNotes" >
-    
-   
-    </div>     {{!-- end of row--}}
- 
-  </div> {{!-- end of container--}}
-
-
-</div> {{!-- end of mainBoardContainer--}}
-
-
-
-
-
-              {{!-- below is the old stuff --}}
-
- {{!-- 4 div, 2, br, 1 img, 1 h4, 1h6 and 1 p.
-    One div for  class="col-s-4" then two <br> <br> then next div for class="card border-0 shadow-none" 
-    style="background-color: transparent; border-color:transparent; transform: rotate(20deg);"
-    
-     --}}
-     {{!-- style=" transform: rotate(10deg); transform:translateX(100px); border-color:transparent; background-color: transparent;  "  class="card border-0 shadow-none"--}}
-    {{!-- <div class="col-s-6">
-       <br> <br>
-      <div class="card border-0 shadow-none" style="background-color: transparent; border-color:transparent; transform: rotate(20deg);">
-         <img class="card-img-top" src="../assets/notecard1.png" alt="Card image" style="width: 300px; height:300px;">
-         
-        <div class="card-img-overlay text-black d-flex flex-column justify-content-center">
-          <div class="pin "></div>
-          <h4 class="card-title">Bologna</h4>
-          <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
-          <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
+<div class="container addMe">
+    <div class="row s12 m3 l3 deleteMe">
+        <div class=" container myBoardContainer mainBoardPosting">
         </div>
-      </div>
     </div>
-     <div class="col-s-6 ">
-      <div class="card border-0 shadow-none" style="background-color: transparent; border-color:transparent; transform: rotate(30deg);">
-         <img class="card-img" src="../assets/notecard1.png" alt="Bologna"style="width: 300px; height:300px;">
-        <div class="card-img-overlay text-black d-flex flex-column justify-content-center">
-          <h4 class="card-title">Bologna</h4>
-          <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
-          <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-s-6 ">
-      <div class="card border-0 shadow-none" style="background-color: transparent; border-color:transparent;" >
-         <img class="card-img" src="../assets/notecard1.png" alt="Bologna"style="width: 300px; height:300px;">
-        <div class="card-img-overlay text-black d-flex flex-column justify-content-center">
-          <h4 class="card-title">Bologna</h4>
-          <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
-          <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
-        </div>
-      </div>
-    </div>
-  
-    <div class="col-s-6 " style="padding-right:10%">
-      <div class="card border-0 shadow-none" style="background-color: transparent; border-color:transparent; ">
-         <img class="card-img" src="../assets/notecard1.png" alt="Bologna"style="width: 300px; height:300px;">
-        <div class="card-img-overlay text-black d-flex flex-column justify-content-center">
-          <h4 class="card-title">Bologna</h4>
-          <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
-          <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-s-6 ">
-      <div class="card border-0 shadow-none" style="background-color: transparent; border-color:transparent;" >
-         <img class="card-img" src="../assets/notecard1.png" alt="Bologna"style="width: 300px; height:300px;">
-        <div class="card-img-overlay text-black d-flex flex-column justify-content-center">
-          <h4 class="card-title">Bologna</h4>
-          <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
-          <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-s-4 ">
-      <div class="card border-0 shadow-none" style="background-color: transparent; border-color:transparent;">
-         <img class="card-img" src="../assets/notecard1.png" alt="Bologna"style="width: 300px; height:300px;">
-        <div class="card-img-overlay text-black d-flex flex-column justify-content-center">
-          <h4 class="card-title">Bologna</h4>
-          <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
-          <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-s-4 ">
-      <div class="card border-0 shadow-none" style="background-color: transparent; border-color:transparent;">
-         <img class="card-img" src="../assets/notecard1.png" alt="Bologna"style="width: 300px; height:300px;">
-        <div class="card-img-overlay text-black d-flex flex-column justify-content-center">
-          <h4 class="card-title">Bologna</h4>
-          <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
-          <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
-        </div>
-      </div>
-    </div>
-     <div class="col-s-4 ">
-      <div class="card border-0 shadow-none" style="background-color: transparent; border-color:transparent;">
-         <img class="card-img" src="../assets/notecard1.png" alt="Bologna"style="width: 300px; height:300px;">
-        <div class="card-img-overlay text-black d-flex flex-column justify-content-center">
-          <h4 class="card-title">Bologna</h4>
-          <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
-          <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
-        </div>
-      </div>
-    </div>
-     <div class="col-s-4 ">
-      <div class="card border-0 shadow-none" style="background-color: transparent; border-color:transparent;">
-         <img class="card-img" src="../assets/notecard1.png" alt="Bologna"style="width: 300px; height:300px;">
-        <div class="card-img-overlay text-black d-flex flex-column justify-content-center">
-          <h4 class="card-title">Bologna</h4>
-          <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
-          <p class="card-text">It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people. </p>
-        </div>
-      </div>
-    </div> --}}
-
-{{!-- 
-   <div>
-    <h1 class="center-align-header">Check Out Our Community Posts!</h1>
 </div>
-<div>
-<div class="mainBoardContainer">
-<div class="boardCard">
-    <div class="postText">gg</div>
-    <div class="pin"></div>
-</div>
-<div class="boardCardAlt">
-    <div class="pin2"></div>
-</div>
-<div class="boardCardAlt2">
-    <div class="pin3"></div>
-</div>
-<div class="boardCardAlt3">
-    <div class="pin4"></div>
-</div>
-<div class="boardCardAlt4">
-    <div class="pin5"></div>
-</div>
-    <div class="boardCardAlt5">
-    <div class="pin6"></div>
-    </div>
-    <div class="boardCardAlt6">
-    <div class="pin7"></div>
-    </div>
-
-</div> 
-</div> --}}
