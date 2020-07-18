@@ -4,28 +4,32 @@
 <div id="main_block" class="makePost">
   <form>
   <div class="form-group post-form">
-    <label for="exampleFormControlInput1"> Name</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <label for="exampleFormControlInput1" > Name</label>
+    <input type="text" class="form-control userName" id="exampleFormControlInput1" placeholder="name@example.com">
   </div>
   <div class="form-group">
-    <label for="exampleFormControlInput1">Email Address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@example.com">
+    <label for="exampleFormControlInput1" >Email Address</label>
+    <input type="email" class="form-control userEmail" id="exampleFormControlInput1" placeholder="email@example.com">
   </div>
    <div class="form-group">
-    <label for="exampleFormControlInput1">Phone Number</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="(800)555-5555">
+    <label for="exampleFormControlInput1" >Phone Number</label>
+    <input type="text" class="form-control userPhone" id="exampleFormControlInput1" placeholder="(800)555-5555">
+  </div>
+   <div class="form-group">
+    <label for="exampleFormControlInput1">Post Title</label>
+    <input type="text" class="form-control postTitle" id="exampleFormControlInput1" placeholder="Post Title">
   </div>
   <br>
   <form action="#">
     <p>
       <label>
-        <input name="group1" type="radio" />
+        <input name="group1" type="radio" id="buyInstr" />
         <span>Buy an Instrument</span>
       </label>
     </p>
     <p>
-      <label>
-        <input name="group1" type="radio" />
+      <label id="sellInstr">
+        <input name="group1" type="radio" id="sellInstr" />
         <span>Sell an Instrument</span>
       </label>
     </p>
@@ -37,27 +41,16 @@
     <select class="form-control" id="exampleFormControlSelect1">
       
     </select>
-  </div>
-     <div class="form-group" id="musicGenre">
-    <label for="exampleFormControlSelect1">Music Genre:</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-   
-    </select>
-  </div>
-      <div class="form-group" id="bandMate">
-    <label for="exampleFormControlSelect1">Band Position:</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-     
-    </select>
+  
   </div>
    <div class="form-group">
-    <label for="exampleFormControlTextarea1">Description of instrument to buy/sell</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="exampleFormControlTextarea1" >Description of instrument to buy/sell</label>
+    <textarea class="form-control userMessage" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
 </form>
 
   
-  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+  <button class="btn waves-effect waves-light" type="submit" name="action" id="sbmtBtn">Submit
     <i class="material-icons right">send</i>
   </button>
 </form>
