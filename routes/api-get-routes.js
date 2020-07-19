@@ -21,12 +21,14 @@ module.exports = (app) => {
 
 
     app.get("/api/instruments/:instr", (req, res) => {
-        let query = req.params.instr.toLowerCase();
+        // let query = req.params.instr.toLowerCase();
 
-        let instrIndex = instr.findIndex(i => {
-            return query === i
-        });
-        instrIndex++;
+        // let instrIndex = instr.findIndex(i => {
+        //     return query
+        // });
+        // instrIndex = query;
+        // instrIndex++;
+
         db.cb_Post.findAll({
 
             include: [db.cb_User],
@@ -35,9 +37,9 @@ module.exports = (app) => {
             },
             raw: true
         })
-            .then(queryPosts => {
-                console.log("REQUESTED QUERIED instrument POSTS ---> ", queryPosts);
-                res.json(queryPosts);
+            .then(usersPosts => {
+                console.log("REQUESTED QUERIED instrument POSTS ---> ", usersPosts);
+                res.json(usersPosts);
             });
     });
 

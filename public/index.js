@@ -418,7 +418,7 @@ $(document).ready(function () {
             <div class="card-image waves-effect waves-block waves-light"></div>
                 <div class="card-content  ${pColor} lighten-1">
                 <div class="${pPin}"></div>
-                <small> Posted by: ${usersPosts[i].userName}</small>
+                <small> Posted by: ${usersPosts[i]["cb_User.userName"]}</small>
                   <span class="card-title activator grey-text text-darken-4"><span class="postTitle">${userTitleText}</span><i class="material-icons right">more_vert</i></span>
                   <hr>
                   <p>${userBodyText}</p>
@@ -430,10 +430,10 @@ $(document).ready(function () {
                 <div class="card-reveal ${pColor} accent-1">
                   <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
                   <div> <i class="small material-icons">contact_phone</i> </div>
-                  <p class="contact-info"> Contact number: <span> ${usersPosts[i].userNumber}</span></p>
+                  <p class="contact-info"> Contact number: <span> ${usersPosts[i]["cb_User.userNumber"]}</span></p>
                   <hr>
                   <div> <i class="small material-icons">email</i> </div>
-                  <p class="contact-info"> Contact email: <a href="mailto:${usersPosts[i].userEmail}"> ${usersPosts[i].userEmail}</a></p>
+                  <p class="contact-info"> Contact email: <small> ${usersPosts[i]["cb_User.userEmail"]}</small></p>
                   </p>
                 </div>          
             </div>
