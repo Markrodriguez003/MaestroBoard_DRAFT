@@ -4,6 +4,7 @@
       "commonjs": true,
       "node": true
   },
+  "parser": "babel-eslint", 
   "rules": {
       "no-duplicate-case":"error",
       "no-empty":"error",
