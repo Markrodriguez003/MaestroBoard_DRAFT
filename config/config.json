@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "root",
-    "password": "D5c67ffg21",
+    "password": "^!5PpS%Oyh@j2*",
     "database": "maestroboard",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "D5c67ffg21",
+    "password": "^!5PpS%Oyh@j2*",
     "database": "maestroboard",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "D5c67ffg21",
+    "password": "^!5PpS%Oyh@j2*",
     "database": "maestroboard",
     "host": "127.0.0.1",
     "dialect": "mysql"
