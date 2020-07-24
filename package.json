@@ -4,7 +4,6 @@
   "description": "A corkboard search app for musicians looking for instruments for purchase!",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
